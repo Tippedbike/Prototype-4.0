@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets/Scripts/RotateCamera.cs" />
      <Compile Include="Assets/Scripts/PlayerController.cs" />
+     <Compile Include="Assets/Scripts/Enemy.cs" />
      <None Include="Assets/Course Library/_Source_Files/_LICENSE.txt" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/2020.3.27f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
