@@ -230,7 +230,7 @@ Rigidbody:
   m_GameObject: {fileID: 425105345}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 2
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -545,6 +545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdbaca3db770448efa652efde28e5ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 3503590344110653730, guid: 04a72aa0f237f496eaf1a4c886ce25d1, type: 3}
 --- !u!1 &1346016461
 GameObject:
   m_ObjectHideFlags: 0
