@@ -500,7 +500,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdbaca3db770448efa652efde28e5ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 3503590344110653730, guid: 04a72aa0f237f496eaf1a4c886ce25d1, type: 3}
+  enemies:
+  - {fileID: 3503590344110653730, guid: 04a72aa0f237f496eaf1a4c886ce25d1, type: 3}
+  - {fileID: 743015846946783775, guid: 8f4b163f9e0cb417896dc03ceb51b750, type: 3}
   enemyCount: 0
   powerupPrefab: {fileID: 5130141876842478470, guid: 1e35238eeb73b4ad894e52b525b92605, type: 3}
   waveNumber: 1
