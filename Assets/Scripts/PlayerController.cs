@@ -7,9 +7,10 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     private GameObject focalPoint;
     private Rigidbody playerRb;
-    public float speed = 5.0f;
+    public float speed = 25;
     public bool hasPowerup = false; 
     public bool hasPowerup2 = false; 
+    public bool hasPowerup3 = false;
     public GameObject powerupIndicator;
     float powerupStrength = 15.0f;
 
@@ -42,12 +43,20 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(PowerCountdownRoutine());
             powerupIndicator.gameObject.SetActive(true);
         }
+        if (other.CompareTag("Powerup3"))
+        {
+            hasPowerup3 = true;
+            Destroy(other.gameObject);
+            StartCoroutine(PowerCountdownRoutine());
+            powerupIndicator.gameObject.SetActive(true);
+        }
     }
     IEnumerator PowerCountdownRoutine()
     {
         yield return new WaitForSeconds(7);
         hasPowerup = false; 
         hasPowerup2 = false;
+        hasPowerup3 = false;
         powerupIndicator.gameObject.SetActive(false);
     }
 
@@ -67,10 +76,17 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy") && hasPowerup2)
         {
             Debug.Log("Hi");
-            //Rigidbody enemyRigidbody = collision.gameObject.GetComponent<Rigidbody>();
-            //Vector3 awayFromPlayer = (collision.gameObject.transform.position - transform.position);
-            //Debug.Log("Collided with" + collision.gameObject.name + "with powerup set to" + hasPowerup);
-            //enemyRigidbody.AddForce(awayFromPlayer * powerupStrength, ForceMode.Impulse);
+            Rigidbody enemyRigidbody = collision.gameObject.GetComponent<Rigidbody>();
+
+        }
+
+
+
+        if (collision.gameObject.CompareTag("Enemy") && hasPowerup3)
+        {
+            Debug.Log("Hi");
+            Rigidbody enemyRigidbody = collision.gameObject.GetComponent<Rigidbody>();
+
         }
     }
 }
