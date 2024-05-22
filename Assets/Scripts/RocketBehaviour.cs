@@ -7,6 +7,7 @@ public class RocketBehaviour : MonoBehaviour
     private Transform target;
     private float speed = 15.0f;
     private bool homing;
+
     private float rocketStrength = 15.0f;
     private float aliveTimer = 5.0f;
     // Start is called before the first frame update
@@ -14,12 +15,12 @@ public class RocketBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         void Fire(Transform newTarget)
+        if(homing && target != null)
         {
-             target = homingTarget;
-             homing = true;
-             Destroy(gameObject, aliveTimer);
-        }
+            Vector3 moveDirection = (target.transform.position - transform.position).normalized;
+            transform.position += moveDirection * speed * Time.deltaTime;
+            transform.LookAt(target);
+}
     }
     public void Fire(Transform newTarget)
     {
