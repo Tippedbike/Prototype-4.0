@@ -275,11 +275,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119868146}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.92, z: 0}
-  m_LocalScale: {x: 9, y: 9, z: 9}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.25, y: 2.25, z: 2.25}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1975365761}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1211016355
 GameObject:
@@ -504,7 +504,7 @@ MonoBehaviour:
   - {fileID: 3503590344110653730, guid: 04a72aa0f237f496eaf1a4c886ce25d1, type: 3}
   - {fileID: 743015846946783775, guid: 8f4b163f9e0cb417896dc03ceb51b750, type: 3}
   enemyCount: 0
-  powerupPrefab:
+  powerupPrefabs:
   - {fileID: 5130141876842478470, guid: 1e35238eeb73b4ad894e52b525b92605, type: 3}
   - {fileID: 1218364962325145600, guid: 6303fe32c9a664ff18c24f09ba7e4243, type: 3}
   - {fileID: 5568649256410773766, guid: e56479a2edb4c4ac2a008eeac1c87b90, type: 3}
@@ -642,6 +642,11 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 8878a37eb67ddac4ead51890a31d6a18, type: 3}
+--- !u!4 &1975365761 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 614652334387211541, guid: acfd3bd8b3c1246bc8656437ee831558, type: 3}
+  m_PrefabInstance: {fileID: 614652334778432211}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &614652334778432211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -656,6 +661,22 @@ PrefabInstance:
     - target: {fileID: 614652334387211538, guid: acfd3bd8b3c1246bc8656437ee831558, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 614652334387211540, guid: acfd3bd8b3c1246bc8656437ee831558, type: 3}
+      propertyPath: hangTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 614652334387211540, guid: acfd3bd8b3c1246bc8656437ee831558, type: 3}
+      propertyPath: smashSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 614652334387211540, guid: acfd3bd8b3c1246bc8656437ee831558, type: 3}
+      propertyPath: rocketPrefab
+      value: 
+      objectReference: {fileID: 3968478169612679890, guid: 9e13c610b5b4740c3970bfdb205b8af7, type: 3}
+    - target: {fileID: 614652334387211540, guid: acfd3bd8b3c1246bc8656437ee831558, type: 3}
+      propertyPath: currentPowerUp
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 614652334387211540, guid: acfd3bd8b3c1246bc8656437ee831558, type: 3}
       propertyPath: powerupIndicator

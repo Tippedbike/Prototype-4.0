@@ -127,6 +127,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   hasPowerup: 0
-  hasPowerup2: 0
-  hasPowerup3: 0
   powerupIndicator: {fileID: 0}
+  currentPowerUp: 0
+  rocketPrefab: {fileID: 3968478169612679890, guid: 9e13c610b5b4740c3970bfdb205b8af7, type: 3}
+  hangTime: 2
+  smashSpeed: 10
+  explosionForce: 50
+  explosionRadius: 20
